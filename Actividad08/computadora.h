@@ -2,6 +2,7 @@
 #define COMPUTADORA_H
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -22,6 +23,35 @@ public:
     std::string getProcesador();
     void setMemoriaRAM(int v);
     int getMemoriaRAM();
+
+    friend ostream &operator<<(ostream &out, const Computadora &c){
+        out << left;
+        out << setw(12) << c.nombre;
+        out << setw(12) << c.sistemaOp;
+        out << setw(12) << c.procesador;
+        out << setw(10) << c.memoriaRAM;
+        out << endl;
+        return out;
+    }
+
+    friend istream &operator>>(istream &in, Computadora &c){
+        string temp;
+        int GB;
+
+        cout << "Nombre: ";
+        getline(cin, c.nombre);
+
+        cout << "Sistema operativo: ";
+        getline(cin, c.sistemaOp);
+
+        cout << "Procesador: ";
+        getline(cin, c.procesador);
+
+        cout << "GB de memoria RAM: ";
+        cin >> c.memoriaRAM;
+
+        return in;
+    }
 };
 
 

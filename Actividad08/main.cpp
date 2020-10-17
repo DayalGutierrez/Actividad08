@@ -15,9 +15,18 @@ int main(){
 
     Laboratorio lab;
 
-    lab.agregarFinal(compu1);
-    lab.agregarFinal(compu2);
+    //lab.agregarFinal(compu1);
+    //lab.agregarFinal(compu2);
+
+    lab << compu1 << compu2;
+
+    Computadora compu3;
+    cin >> compu3;
+    lab << compu3;
+
     lab.mostrar();
+
+    //cout << compu1;
 
     return 0;
 }
