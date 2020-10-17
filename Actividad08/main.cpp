@@ -26,7 +26,7 @@ int main(){
 
     lab.mostrar();
 
-    //cout << compu1;
+    cout << compu1;
 
     return 0;
 }
