@@ -25,8 +25,10 @@ int main(){
     lab << compu3;
 
     lab.mostrar();
+    lab.respaldar_tabla();
+    lab.respaldar();
 
-    cout << compu1;
+    //cout << compu1;
 
     return 0;
 }
